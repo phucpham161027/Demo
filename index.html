@@ -408,11 +408,18 @@
                 });
             });
         });
-    </script>
-</body>
-</html>
-</center>
-oll for navigation links
+   <script>
+        // Scroll to top button
+        window.addEventListener('scroll', () => {
+            const scrollTop = document.querySelector('.scroll-top');
+            if (window.scrollY > 300) {
+                scrollTop.classList.add('show');
+            } else {
+                scrollTop.classList.remove('show');
+            }
+        });
+
+        // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -424,4 +431,3 @@ oll for navigation links
     </script>
 </body>
 </html>
-</center>
